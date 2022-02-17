@@ -1564,7 +1564,11 @@
 
   <h1>PAINT</h1>
 
-<p>this callback is called every frame, you can call all <a href="../../api_functions/render/">render.*</a> functions inside of this callback</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>you can call all <a href="../../api_functions/render/">render.*</a> functions inside of this callback</p>
+</div>
+<p>this callback is called every frame</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">global_vars</span><span class="p">.</span><span class="n">frame_count</span><span class="p">())</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
