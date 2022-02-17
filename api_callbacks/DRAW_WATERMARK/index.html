@@ -570,20 +570,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api_functions/callbacks/" class="md-nav__link">
-        callbacks
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../api_functions/client/" class="md-nav__link">
         client
       </a>
@@ -1578,7 +1564,8 @@
 
   <h1>DRAW_WATERMARK</h1>
 
-<p>this callback is called every time the hack renders the watermark, it can be used to either replace the text in the watermark or override it with a custom watermark</p>
+<p>this callback is called every time the hack renders the watermark, it can be used to either replace the text in the watermark or override it with a custom watermark<br>
+you can call all <a href="../../api_functions/render/">render.*</a> functions inside of this callback</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">function</span> <span class="nf">on_draw_watermark</span><span class="p">(</span><span class="n">watermark_text</span><span class="p">)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="c1">-- returning any string will override the watermark text</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="kr">return</span> <span class="s2">&quot;my custom watermark for &quot;</span> <span class="o">..</span> <span class="n">user</span><span class="p">.</span><span class="n">name</span>
