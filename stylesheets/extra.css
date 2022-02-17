@@ -667,3 +667,7 @@ a.md-nav__link {
     color: #e2b5c7 !important;
     background: #151515 !important;
 }
+
+.highlight :is(.c,.cm,.c1,.ch,.cs,.sd) {
+    color: rgba(255 255 255/35%);
+}
