@@ -482,6 +482,48 @@
   
   
     <li class="md-nav__item">
+      <a href="../WORLD_HITMARKER/" class="md-nav__link">
+        WORLD_HITMARKER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SCREEN_HITMARKER/" class="md-nav__link">
+        SCREEN_HITMARKER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SUPPORTIVE_RECTANGLE/" class="md-nav__link">
+        SUPPORTIVE_RECTANGLE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../SHUTDOWN/" class="md-nav__link">
         SHUTDOWN
       </a>
@@ -556,8 +598,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api_functions/anti_aim/" class="md-nav__link">
-        anti_aim
+      <a href="../../api_functions/antiaim/" class="md-nav__link">
+        antiaim
       </a>
     </li>
   
@@ -1514,8 +1556,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api_enumerations/e_player_animlayers/" class="md-nav__link">
+        e_player_animlayers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api_enumerations/e_player_flags/" class="md-nav__link">
         e_player_flags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_enumerations/e_player_poses/" class="md-nav__link">
+        e_player_poses
       </a>
     </li>
   
@@ -1580,7 +1650,7 @@
 
 <p>this callback is called every time csgo fires an event, along with it the event object is passed.<br>
 you can get a list of all events and their fields <a href="https://wiki.alliedmods.net/Counter-Strike:_Global_Offensive_Events">here</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">function</span> <span class="nf">on_event</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_event</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;received event&quot;</span><span class="p">,</span> <span class="n">event</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="c1">-- only react to specific events</span>
@@ -1598,7 +1668,7 @@ you can get a list of all events and their fields <a href="https://wiki.alliedmo
 </code></pre></div>
 <p>alternatively, if you only want to react to a specific event, there is an optional argument you can pass into the callbacks.add function</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-- this function will only be called for &quot;player_death&quot; events</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kr">function</span> <span class="nf">on_player_death</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_player_death</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="c1">-- all fields can be found here: https://wiki.alliedmods.net/Counter-Strike:_Global_Offensive_Events#player_death</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a player got killed by a&quot;</span><span class="p">,</span> <span class="n">event</span><span class="p">.</span><span class="n">weapon</span><span class="p">)</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kr">end</span>

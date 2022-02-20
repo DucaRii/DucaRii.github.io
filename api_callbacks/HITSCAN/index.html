@@ -482,6 +482,48 @@
   
   
     <li class="md-nav__item">
+      <a href="../WORLD_HITMARKER/" class="md-nav__link">
+        WORLD_HITMARKER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SCREEN_HITMARKER/" class="md-nav__link">
+        SCREEN_HITMARKER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SUPPORTIVE_RECTANGLE/" class="md-nav__link">
+        SUPPORTIVE_RECTANGLE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../SHUTDOWN/" class="md-nav__link">
         SHUTDOWN
       </a>
@@ -556,8 +598,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api_functions/anti_aim/" class="md-nav__link">
-        anti_aim
+      <a href="../../api_functions/antiaim/" class="md-nav__link">
+        antiaim
       </a>
     </li>
   
@@ -1514,8 +1556,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api_enumerations/e_player_animlayers/" class="md-nav__link">
+        e_player_animlayers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api_enumerations/e_player_flags/" class="md-nav__link">
         e_player_flags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_enumerations/e_player_poses/" class="md-nav__link">
+        e_player_poses
       </a>
     </li>
   
@@ -1585,7 +1655,7 @@
 <li>an immutable instance of the current <a href="../../api_types/user_cmd_t/">user_cmd_t</a></li>
 <li>an immutable instance of the current <a href="../../api_types/unpredicted_data_t/">unpredicted_data_t</a></li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">function</span> <span class="nf">on_hitscan</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">cmd</span><span class="p">,</span> <span class="n">unpredicted_data</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_hitscan</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">cmd</span><span class="p">,</span> <span class="n">unpredicted_data</span><span class="p">)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="c1">-- force hitchance to 100 on head</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">ctx</span><span class="p">:</span><span class="n">set_hitchance</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">e_hitscan_groups</span><span class="p">.</span><span class="n">HEAD</span><span class="p">)</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kr">end</span>

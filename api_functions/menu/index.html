@@ -477,6 +477,48 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api_callbacks/WORLD_HITMARKER/" class="md-nav__link">
+        WORLD_HITMARKER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_callbacks/SCREEN_HITMARKER/" class="md-nav__link">
+        SCREEN_HITMARKER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_callbacks/SUPPORTIVE_RECTANGLE/" class="md-nav__link">
+        SUPPORTIVE_RECTANGLE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api_callbacks/SHUTDOWN/" class="md-nav__link">
         SHUTDOWN
       </a>
@@ -555,8 +597,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../anti_aim/" class="md-nav__link">
-        anti_aim
+      <a href="../antiaim/" class="md-nav__link">
+        antiaim
       </a>
     </li>
   
@@ -766,6 +808,20 @@
         <li class="md-nav__item">
   <a href="#find" class="md-nav__link">
     find
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_group_column" class="md-nav__link">
+    set_group_column
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_group_visibility" class="md-nav__link">
+    set_group_visibility
   </a>
   
 </li>
@@ -1638,8 +1694,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api_enumerations/e_player_animlayers/" class="md-nav__link">
+        e_player_animlayers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api_enumerations/e_player_flags/" class="md-nav__link">
         e_player_flags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_enumerations/e_player_poses/" class="md-nav__link">
+        e_player_poses
       </a>
     </li>
   
@@ -1737,6 +1821,20 @@
         <li class="md-nav__item">
   <a href="#find" class="md-nav__link">
     find
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_group_column" class="md-nav__link">
+    set_group_column
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_group_visibility" class="md-nav__link">
+    set_group_visibility
   </a>
   
 </li>
@@ -1844,8 +1942,9 @@
 <hr />
 <h2 id="find">find<a class="headerlink" href="#find" title="Copy Link">#</a></h2>
 <p><sub> Returns a control object or an array depending on the elements<br> can return any of the <a href="../../api_menu_controls/overview/">menu controls</a></p>
+<p><sub> Note: When getting the value of an element inside any of these types of <a href="https://i.imgur.com/0RFp9ch.png">controls</a> make sure to suffix it with "#" and the tab name
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>any find(&lt;string&gt; tab, &lt;string&gt; sub_tab, &lt;string&gt; group_name, &lt;string&gt; element_name)
-</code></pre></div>
+</code></pre></div></p>
 <table>
 <thead>
 <tr>
@@ -1878,12 +1977,66 @@
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1">-- when referencing a control that has sub-controls (like a colorpicker or keybinds) it will return an indexed table instead</span>
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="kd">local</span> <span class="n">accent_color</span> <span class="o">=</span> <span class="n">menu</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;misc&quot;</span><span class="p">,</span> <span class="s2">&quot;main&quot;</span><span class="p">,</span> <span class="s2">&quot;config&quot;</span><span class="p">,</span> <span class="s2">&quot;accent color&quot;</span><span class="p">)</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1">-- accent_color[0] is the text</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1">-- accent_color[1] is the color picker</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1">-- accent_color[1] is the text</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1">-- accent_color[2] is the color picker</span>
 <a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
 <a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="c1">-- or, alternatively...</span>
 <a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
 <a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="kd">local</span> <span class="n">accent_color_text</span><span class="p">,</span> <span class="n">accent_color_color</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="n">menu</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;misc&quot;</span><span class="p">,</span> <span class="s2">&quot;main&quot;</span><span class="p">,</span> <span class="s2">&quot;config&quot;</span><span class="p">,</span> <span class="s2">&quot;accent color&quot;</span><span class="p">))</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="c1">--</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="kd">local</span> <span class="n">glow_enabled</span><span class="p">,</span><span class="n">glow_color</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="n">menu</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;visuals&quot;</span><span class="p">,</span> <span class="s2">&quot;esp&quot;</span><span class="p">,</span> <span class="s2">&quot;models&quot;</span><span class="p">,</span><span class="s2">&quot;glow#enemy&quot;</span><span class="p">))</span>
+</code></pre></div>
+<hr />
+<h2 id="set_group_column">set_group_column<a class="headerlink" href="#set_group_column" title="Copy Link">#</a></h2>
+<p><sub> places the target group in a column</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>text_t set_group_column(&lt;string&gt; group, int column)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="left">Fields</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>group</code><br><span class="table_types"><em>string</em></span></td>
+<td align="left">group which will be moved to the target column</td>
+</tr>
+<tr>
+<td align="left"><code>column</code><br><span class="table_types"><em>int</em></span></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h4>Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">menu</span><span class="p">.</span><span class="n">set_group_column</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">-- place in left column</span>
+</code></pre></div>
+<hr />
+<h2 id="set_group_visibility">set_group_visibility<a class="headerlink" href="#set_group_visibility" title="Copy Link">#</a></h2>
+<p><sub> toggles visiblity for a group</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>text_t set_group_column(&lt;string&gt; group, bool visible)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="left">Fields</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>group</code><br><span class="table_types"><em>string</em></span></td>
+<td align="left">group which will be made visible or not</td>
+</tr>
+<tr>
+<td align="left"><code>visible</code><br><span class="table_types"><em>bool</em></span></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h4>Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">menu</span><span class="p">.</span><span class="n">set_group_visibility</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span> <span class="c1">-- hide group</span>
 </code></pre></div>
 <hr />
 <div class="admonition warning">
@@ -1892,7 +2045,7 @@
 </div>
 <h2 id="add_text">add_text<a class="headerlink" href="#add_text" title="Copy Link">#</a></h2>
 <p><sub> Creates a text control and returns it</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>text_t add_text(&lt;string&gt; group, &lt;string&gt; text)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>text_t add_text(&lt;string&gt; group, &lt;string&gt; text)
 </code></pre></div>
 <table>
 <thead>
@@ -1913,12 +2066,12 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">local</span> <span class="n">text_item</span> <span class="o">=</span> <span class="n">menu</span><span class="p">.</span><span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">local</span> <span class="n">text_item</span> <span class="o">=</span> <span class="n">menu</span><span class="p">.</span><span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h2 id="add_checkbox">add_checkbox<a class="headerlink" href="#add_checkbox" title="Copy Link">#</a></h2>
 <p><sub> Creates a checkbox control and returns it</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>checkbox_t add_checkbox(&lt;string&gt; group, &lt;string&gt; name, [optional] &lt;bool&gt; default_value)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>checkbox_t add_checkbox(&lt;string&gt; group, &lt;string&gt; name, [optional] &lt;bool&gt; default_value)
 </code></pre></div>
 <table>
 <thead>
@@ -1943,12 +2096,12 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">local</span> <span class="n">checkbox_item</span> <span class="o">=</span> <span class="n">menu</span><span class="p">.</span><span class="n">add_checkbox</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="s2">&quot;checkyboxy&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">local</span> <span class="n">checkbox_item</span> <span class="o">=</span> <span class="n">menu</span><span class="p">.</span><span class="n">add_checkbox</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="s2">&quot;checkyboxy&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h2 id="add_selection">add_selection<a class="headerlink" href="#add_selection" title="Copy Link">#</a></h2>
 <p><sub> Creates a selection control and returns it</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>void add_selection(&lt;string&gt; group, &lt;string&gt; name, &lt;table&gt; items, [optional] &lt;int&gt; visible_items = 6)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>void add_selection(&lt;string&gt; group, &lt;string&gt; name, &lt;table&gt; items, [optional] &lt;int&gt; visible_items = 6)
 </code></pre></div>
 <table>
 <thead>
@@ -1977,12 +2130,12 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">local</span> <span class="n">selection_item</span> <span class="o">=</span> <span class="n">menu</span><span class="p">.</span><span class="n">add_selection</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="s2">&quot;selecty&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;element1&quot;</span><span class="p">,</span> <span class="s2">&quot;element2&quot;</span><span class="p">,</span> <span class="s2">&quot;element3&quot;</span><span class="p">})</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kd">local</span> <span class="n">selection_item</span> <span class="o">=</span> <span class="n">menu</span><span class="p">.</span><span class="n">add_selection</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="s2">&quot;selecty&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;element1&quot;</span><span class="p">,</span> <span class="s2">&quot;element2&quot;</span><span class="p">,</span> <span class="s2">&quot;element3&quot;</span><span class="p">})</span>
 </code></pre></div>
 <hr />
 <h2 id="add_slider">add_slider<a class="headerlink" href="#add_slider" title="Copy Link">#</a></h2>
 <p><sub> Creates a slider control and returns it</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>slider_t add_slider(&lt;string&gt; group, &lt;string&gt; name, &lt;float&gt; min, &lt;float&gt; max, [optional] &lt;float&gt; step = 1.0, [optional] &lt;int&gt; precision = 0, [optional] &lt;string&gt; suffix )
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>slider_t add_slider(&lt;string&gt; group, &lt;string&gt; name, &lt;float&gt; min, &lt;float&gt; max, [optional] &lt;float&gt; step = 1.0, [optional] &lt;int&gt; precision = 0, [optional] &lt;string&gt; suffix )
 </code></pre></div>
 <table>
 <thead>
@@ -2023,12 +2176,12 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">local</span> <span class="n">slider_item</span> <span class="o">=</span> <span class="n">menu</span><span class="p">.</span><span class="n">add_slider</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="s2">&quot;slidy&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kd">local</span> <span class="n">slider_item</span> <span class="o">=</span> <span class="n">menu</span><span class="p">.</span><span class="n">add_slider</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="s2">&quot;slidy&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h2 id="add_button">add_button<a class="headerlink" href="#add_button" title="Copy Link">#</a></h2>
 <p><sub> Creates a button control and returns it</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>button_t button(&lt;string&gt; group, &lt;string&gt; name, &lt;function&gt; callback )
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>button_t button(&lt;string&gt; group, &lt;string&gt; name, &lt;function&gt; callback )
 </code></pre></div>
 <table>
 <thead>
@@ -2053,14 +2206,14 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">menu</span><span class="p">.</span><span class="n">add_button</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">()</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hi&quot;</span><span class="p">)</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="kr">end</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">menu</span><span class="p">.</span><span class="n">add_button</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">()</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hi&quot;</span><span class="p">)</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="kr">end</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h2 id="add_separator">add_separator<a class="headerlink" href="#add_separator" title="Copy Link">#</a></h2>
 <p><sub> Creates a separator control and returns it</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>void menu.add_separator(&lt;string&gt; group)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>void menu.add_separator(&lt;string&gt; group)
 </code></pre></div>
 <table>
 <thead>
@@ -2077,12 +2230,12 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">menu</span><span class="p">.</span><span class="n">add_separator</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">menu</span><span class="p">.</span><span class="n">add_separator</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h2 id="add_list">add_list<a class="headerlink" href="#add_list" title="Copy Link">#</a></h2>
 <p><sub> Creates a list control and returns it</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>list_t add_list(&lt;string&gt; group, &lt;string&gt; name, &lt;table&gt; items, [optional] &lt;int&gt; visible_items = 8)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>list_t add_list(&lt;string&gt; group, &lt;string&gt; name, &lt;table&gt; items, [optional] &lt;int&gt; visible_items = 8)
 </code></pre></div>
 <table>
 <thead>
@@ -2111,12 +2264,12 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kd">local</span> <span class="n">list_item</span> <span class="o">=</span> <span class="n">menu</span><span class="p">.</span><span class="n">add_list</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;element1&quot;</span><span class="p">,</span> <span class="s2">&quot;element2&quot;</span><span class="p">,</span> <span class="s2">&quot;element3&quot;</span><span class="p">})</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kd">local</span> <span class="n">list_item</span> <span class="o">=</span> <span class="n">menu</span><span class="p">.</span><span class="n">add_list</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;element1&quot;</span><span class="p">,</span> <span class="s2">&quot;element2&quot;</span><span class="p">,</span> <span class="s2">&quot;element3&quot;</span><span class="p">})</span>
 </code></pre></div>
 <hr />
 <h2 id="add_text_input">add_text_input<a class="headerlink" href="#add_text_input" title="Copy Link">#</a></h2>
 <p><sub> Creates a text input control and returns it</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>text_input_t add_text_input(&lt;string&gt; group, &lt;string&gt; name)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>text_input_t add_text_input(&lt;string&gt; group, &lt;string&gt; name)
 </code></pre></div>
 <table>
 <thead>
@@ -2137,12 +2290,12 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kd">local</span> <span class="n">text_input_item</span> <span class="o">=</span> <span class="n">menu</span><span class="p">.</span><span class="n">add_text_input</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="s2">&quot;texty inputty&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kd">local</span> <span class="n">text_input_item</span> <span class="o">=</span> <span class="n">menu</span><span class="p">.</span><span class="n">add_text_input</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="s2">&quot;texty inputty&quot;</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h2 id="add_multi_selection">add_multi_selection<a class="headerlink" href="#add_multi_selection" title="Copy Link">#</a></h2>
 <p><sub> Creates a multi selection control and returns it</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>multi_selection_t add_multi_selection(&lt;string&gt; group, &lt;string&gt; name, &lt;table&gt; items, [optional] &lt;int&gt; visible_items = 6)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>multi_selection_t add_multi_selection(&lt;string&gt; group, &lt;string&gt; name, &lt;table&gt; items, [optional] &lt;int&gt; visible_items = 6)
 </code></pre></div>
 <table>
 <thead>
@@ -2171,7 +2324,7 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">menu</span><span class="p">.</span><span class="n">add_multi_selection</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="s2">&quot;test2&quot;</span><span class="p">,{</span><span class="s2">&quot;hi&quot;</span><span class="p">,</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="s2">&quot;prim&quot;</span><span class="p">,</span><span class="s2">&quot;cool&quot;</span><span class="p">})</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">menu</span><span class="p">.</span><span class="n">add_multi_selection</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="s2">&quot;test2&quot;</span><span class="p">,{</span><span class="s2">&quot;hi&quot;</span><span class="p">,</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="s2">&quot;prim&quot;</span><span class="p">,</span><span class="s2">&quot;cool&quot;</span><span class="p">})</span>
 </code></pre></div>
 <hr />
 

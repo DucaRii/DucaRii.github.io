@@ -482,6 +482,48 @@
   
   
     <li class="md-nav__item">
+      <a href="../WORLD_HITMARKER/" class="md-nav__link">
+        WORLD_HITMARKER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SCREEN_HITMARKER/" class="md-nav__link">
+        SCREEN_HITMARKER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SUPPORTIVE_RECTANGLE/" class="md-nav__link">
+        SUPPORTIVE_RECTANGLE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../SHUTDOWN/" class="md-nav__link">
         SHUTDOWN
       </a>
@@ -556,8 +598,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api_functions/anti_aim/" class="md-nav__link">
-        anti_aim
+      <a href="../../api_functions/antiaim/" class="md-nav__link">
+        antiaim
       </a>
     </li>
   
@@ -1514,8 +1556,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api_enumerations/e_player_animlayers/" class="md-nav__link">
+        e_player_animlayers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api_enumerations/e_player_flags/" class="md-nav__link">
         e_player_flags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_enumerations/e_player_poses/" class="md-nav__link">
+        e_player_poses
       </a>
     </li>
   
@@ -1583,7 +1653,7 @@
 <p>you can call all <a href="../../api_functions/render/">render.*</a> functions inside of this callback</p>
 </div>
 <p>this callback is called every time the hack renders the watermark, it can be used to either replace the text in the watermark or override it with a custom watermark<br></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">function</span> <span class="nf">on_draw_watermark</span><span class="p">(</span><span class="n">watermark_text</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_draw_watermark</span><span class="p">(</span><span class="n">watermark_text</span><span class="p">)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="c1">-- returning any string will override the watermark text</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="kr">return</span> <span class="s2">&quot;my custom watermark for &quot;</span> <span class="o">..</span> <span class="n">user</span><span class="p">.</span><span class="n">name</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kr">end</span>
@@ -1591,7 +1661,7 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">callbacks</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">e_callbacks</span><span class="p">.</span><span class="n">DRAW_WATERMARK</span><span class="p">,</span> <span class="n">on_draw_watermark</span><span class="p">)</span>
 </code></pre></div>
 <p>if you want to remove the original watermark and replace it with your own, you can return an empty string</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kr">function</span> <span class="nf">on_draw_watermark</span><span class="p">(</span><span class="n">watermark_text</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_draw_watermark</span><span class="p">(</span><span class="n">watermark_text</span><span class="p">)</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="c1">-- draw custom watermark here</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="c1">-- render.rect_filled(vec2_t(500, 0), vec2_t(50, 14), color_t(10, 10, 10, 50))</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
