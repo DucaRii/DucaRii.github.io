@@ -1224,6 +1224,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#set_render_pose" class="md-nav__link">
+    set_render_pose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_render_animlayer" class="md-nav__link">
+    set_render_animlayer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#set_invert_desync" class="md-nav__link">
     set_invert_desync
   </a>
@@ -1507,6 +1521,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api_enumerations/e_animlayers/" class="md-nav__link">
+        e_animlayers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api_enumerations/e_cmd_buttons/" class="md-nav__link">
         e_cmd_buttons
       </a>
@@ -1647,20 +1675,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api_enumerations/e_player_animlayers/" class="md-nav__link">
-        e_player_animlayers
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../api_enumerations/e_player_flags/" class="md-nav__link">
         e_player_flags
       </a>
@@ -1675,8 +1689,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api_enumerations/e_player_poses/" class="md-nav__link">
-        e_player_poses
+      <a href="../../api_enumerations/e_poses/" class="md-nav__link">
+        e_poses
       </a>
     </li>
   
@@ -1780,6 +1794,20 @@
           <li class="md-nav__item">
   <a href="#set_body_lean" class="md-nav__link">
     set_body_lean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_render_pose" class="md-nav__link">
+    set_render_pose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_render_animlayer" class="md-nav__link">
+    set_render_animlayer
   </a>
   
 </li>
@@ -1925,9 +1953,65 @@ in all examples below <strong>ctx</strong> is the antiaim context</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">ctx</span><span class="p">:</span><span class="n">set_body_lean</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span> <span class="c1">-- force right body lean</span>
 </code></pre></div>
 <hr />
+<h3 id="set_render_pose">set_render_pose<a class="headerlink" href="#set_render_pose" title="Copy Link">#</a></h3>
+<p><sub> overrides the specified pose parameter for the next local animation update
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>void set_render_pose(&lt;e_poses&gt; pose_index, &lt;float&gt; pose_value)
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th align="left">Fields</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>pose_index</code><br><span class="table_types"><em>e_poses</em></span></td>
+<td align="left">the pose parameter to override</td>
+</tr>
+<tr>
+<td align="left"><code>pose_value</code><br><span class="table_types"><em>float</em></span></td>
+<td align="left">the new pose parameter value</td>
+</tr>
+</tbody>
+</table>
+<h4>Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">ctx</span><span class="p">:</span><span class="n">set_render_pose</span><span class="p">(</span><span class="n">e_poses</span><span class="p">.</span><span class="n">BODY_PITCH</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span> <span class="c1">-- force visual pitch to 0</span>
+</code></pre></div>
+<hr />
+<h3 id="set_render_animlayer">set_render_animlayer<a class="headerlink" href="#set_render_animlayer" title="Copy Link">#</a></h3>
+<p><sub> overrides the specified animlayer for the next local animation update
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>void set_render_animlayer(&lt;e_animlayers&gt; layer_index, [optional] &lt;float&gt; weight = -1.0, [optional] &lt;float&gt; cycle = -1.0)
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th align="left">Fields</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>layer_index</code><br><span class="table_types"><em>e_animlayers</em></span></td>
+<td align="left">the animlayer to override</td>
+</tr>
+<tr>
+<td align="left"><code>weight</code><br><span class="table_types"><em>float</em></span></td>
+<td align="left">the weight that will be applied to the animlayer, set to -1.0 if you dont want to override it</td>
+</tr>
+<tr>
+<td align="left"><code>cycle</code><br><span class="table_types"><em>float</em></span></td>
+<td align="left">the cycle that will be applied to the animlayer, set to -1.0 if you dont want to override it</td>
+</tr>
+</tbody>
+</table>
+<h4>Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">ctx</span><span class="p">:</span><span class="n">set_render_animlayer</span><span class="p">(</span><span class="n">e_animlayers</span><span class="p">.</span><span class="n">MOVEMENT_MOVE</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span> <span class="c1">-- remove all leg movement</span>
+</code></pre></div>
+<hr />
 <h3 id="set_invert_desync">set_invert_desync<a class="headerlink" href="#set_invert_desync" title="Copy Link">#</a></h3>
 <p><sub> overrides the desync invert for the next antiaim call
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>void set_invert_desync(&lt;bool&gt; invert)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>void set_invert_desync(&lt;bool&gt; invert)
 </code></pre></div></p>
 <table>
 <thead>
@@ -1944,12 +2028,12 @@ in all examples below <strong>ctx</strong> is the antiaim context</p>
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">ctx</span><span class="p">:</span><span class="n">set_invert_desync</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="c1">-- force invert</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">ctx</span><span class="p">:</span><span class="n">set_invert_desync</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="c1">-- force invert</span>
 </code></pre></div>
 <hr />
 <h3 id="set_invert_body_lean">set_invert_body_lean<a class="headerlink" href="#set_invert_body_lean" title="Copy Link">#</a></h3>
 <p><sub> overrides the desync invert for the next antiaim call
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>void set_invert_body_lean(&lt;bool&gt; invert)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>void set_invert_body_lean(&lt;bool&gt; invert)
 </code></pre></div></p>
 <table>
 <thead>
@@ -1966,12 +2050,12 @@ in all examples below <strong>ctx</strong> is the antiaim context</p>
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">ctx</span><span class="p">:</span><span class="n">set_invert_body_lean</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="c1">-- force invert</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">ctx</span><span class="p">:</span><span class="n">set_invert_body_lean</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="c1">-- force invert</span>
 </code></pre></div>
 <hr />
 <h3 id="set_fakelag">set_fakelag<a class="headerlink" href="#set_fakelag" title="Copy Link">#</a></h3>
 <p><sub> overrides whether the current tick will be a choked tick or not
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>void set_fakelag(&lt;bool&gt; should_lag)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>void set_fakelag(&lt;bool&gt; should_lag)
 </code></pre></div></p>
 <table>
 <thead>
@@ -1988,9 +2072,9 @@ in all examples below <strong>ctx</strong> is the antiaim context</p>
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">ctx</span><span class="p">:</span><span class="n">set_fakelag</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="c1">-- forces current tick to be choked</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="c1">-- or...</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">ctx</span><span class="p">:</span><span class="n">set_fakelag</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span> <span class="c1">-- forces current tick to be sent</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">ctx</span><span class="p">:</span><span class="n">set_fakelag</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="c1">-- forces current tick to be choked</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="c1">-- or...</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="n">ctx</span><span class="p">:</span><span class="n">set_fakelag</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span> <span class="c1">-- forces current tick to be sent</span>
 </code></pre></div>
 <hr />
 
