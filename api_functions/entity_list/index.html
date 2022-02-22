@@ -701,6 +701,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#get_entity" class="md-nav__link">
+    get_entity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#get_player_from_userid" class="md-nav__link">
     get_player_from_userid
   </a>
@@ -1756,6 +1763,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#get_entity" class="md-nav__link">
+    get_entity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#get_player_from_userid" class="md-nav__link">
     get_player_from_userid
   </a>
@@ -1818,9 +1832,32 @@
                 
 
 <h1 id="entity_list">entity_list<a class="headerlink" href="#entity_list" title="Copy Link">#</a></h1>
+<h2 id="get_entity">get_entity<a class="headerlink" href="#get_entity" title="Copy Link">#</a></h2>
+<p><sub> Returns entity object from an entity index or handle</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>entity_t get_entity(&lt;int&gt; index_or_handle)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="left">Fields</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>index_or_handle</code><br><span class="table_types"><em>int</em></span></td>
+<td align="left">entity index or handle</td>
+</tr>
+</tbody>
+</table>
+<h4>Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">local</span> <span class="n">first_player</span> <span class="o">=</span> <span class="n">entity_list</span><span class="p">.</span><span class="n">get_entity</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">local</span> <span class="n">ground_entity</span> <span class="o">=</span> <span class="n">entity_list</span><span class="p">.</span><span class="n">get_entity</span><span class="p">(</span><span class="n">first_player</span><span class="p">:</span><span class="n">get_prop</span><span class="p">(</span><span class="s2">&quot;m_hGroundEntity&quot;</span><span class="p">))</span>
+</code></pre></div>
+<hr />
 <h2 id="get_player_from_userid">get_player_from_userid<a class="headerlink" href="#get_player_from_userid" title="Copy Link">#</a></h2>
 <p><sub> Returns entity object from a player's user id</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>entity_t get_player_from_userid(&lt;int&gt; user_id)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>entity_t get_player_from_userid(&lt;int&gt; user_id)
 </code></pre></div>
 <table>
 <thead>
@@ -1837,31 +1874,31 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">local</span> <span class="n">victim</span> <span class="o">=</span> <span class="n">entity_list</span><span class="p">.</span><span class="n">get_player_from_userid</span><span class="p">(</span><span class="n">event_info</span><span class="p">.</span><span class="n">userid</span><span class="p">)</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">victim</span><span class="p">:</span><span class="n">get_name</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">local</span> <span class="n">victim</span> <span class="o">=</span> <span class="n">entity_list</span><span class="p">.</span><span class="n">get_player_from_userid</span><span class="p">(</span><span class="n">event_info</span><span class="p">.</span><span class="n">userid</span><span class="p">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">victim</span><span class="p">:</span><span class="n">get_name</span><span class="p">())</span>
 </code></pre></div>
 <hr />
 <h2 id="get_local_player">get_local_player<a class="headerlink" href="#get_local_player" title="Copy Link">#</a></h2>
 <p><sub> Returns local player entity object</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>entity_t get_local_player()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>entity_t get_local_player()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">local</span> <span class="n">local_player</span> <span class="o">=</span> <span class="n">entity_list</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">()</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">local_player</span><span class="p">:</span><span class="n">get_prop</span><span class="p">(</span><span class="s2">&quot;m_iHealth&quot;</span><span class="p">))</span> <span class="c1">-- prints player&#39;s health</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">local</span> <span class="n">local_player</span> <span class="o">=</span> <span class="n">entity_list</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">()</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">local_player</span><span class="p">:</span><span class="n">get_prop</span><span class="p">(</span><span class="s2">&quot;m_iHealth&quot;</span><span class="p">))</span> <span class="c1">-- prints player&#39;s health</span>
 </code></pre></div>
 <hr />
 <h2 id="get_local_player_or_spectating">get_local_player_or_spectating<a class="headerlink" href="#get_local_player_or_spectating" title="Copy Link">#</a></h2>
 <p><sub> Returns local_player if alive or currently spectated player</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>entity_t get_local_player_or_spectating()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>entity_t get_local_player_or_spectating()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">local</span> <span class="n">entity</span> <span class="o">=</span> <span class="n">entity_list</span><span class="p">.</span><span class="n">get_local_player_or_spectating</span><span class="p">()</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">entity</span><span class="p">:</span><span class="n">get_name</span><span class="p">())</span> <span class="c1">--print&#39;s localplayer name or observer target&#39;s name</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">local</span> <span class="n">entity</span> <span class="o">=</span> <span class="n">entity_list</span><span class="p">.</span><span class="n">get_local_player_or_spectating</span><span class="p">()</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">entity</span><span class="p">:</span><span class="n">get_name</span><span class="p">())</span> <span class="c1">--print&#39;s localplayer name or observer target&#39;s name</span>
 </code></pre></div>
 <hr />
 <h2 id="get_entities_by_classid">get_entities_by_classid<a class="headerlink" href="#get_entities_by_classid" title="Copy Link">#</a></h2>
 <p><sub> Returns table of entities with the specified class id</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>entity_t[] get_entities_by_classid(&lt;int&gt; class_id)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>entity_t[] get_entities_by_classid(&lt;int&gt; class_id)
 </code></pre></div>
 <table>
 <thead>
@@ -1878,15 +1915,15 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">local</span> <span class="n">class_list</span> <span class="o">=</span> <span class="n">entity_list</span><span class="p">.</span><span class="n">get_entities_by_classid</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kr">for</span> <span class="n">i</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">class_list</span><span class="p">)</span> <span class="kr">do</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="kr">end</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">local</span> <span class="n">class_list</span> <span class="o">=</span> <span class="n">entity_list</span><span class="p">.</span><span class="n">get_entities_by_classid</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kr">for</span> <span class="n">i</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">class_list</span><span class="p">)</span> <span class="kr">do</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="kr">end</span>
 </code></pre></div>
 <hr />
 <h2 id="get_entities_by_name">get_entities_by_name<a class="headerlink" href="#get_entities_by_name" title="Copy Link">#</a></h2>
 <p><sub> Returns table of entities with the specified name</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>entity_t[] get_entities_by_name(&lt;string&gt; class_name)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>entity_t[] get_entities_by_name(&lt;string&gt; class_name)
 </code></pre></div>
 <table>
 <thead>
@@ -1903,15 +1940,15 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">local</span> <span class="n">class_list</span> <span class="o">=</span> <span class="n">entity_list</span><span class="p">.</span><span class="n">get_entities_by_name</span><span class="p">(</span><span class="s2">&quot;CCSPlayer&quot;</span><span class="p">)</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kr">for</span> <span class="n">i</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">class_list</span><span class="p">)</span> <span class="kr">do</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">v</span><span class="p">:</span><span class="n">get_name</span><span class="p">())</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="kr">end</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">local</span> <span class="n">class_list</span> <span class="o">=</span> <span class="n">entity_list</span><span class="p">.</span><span class="n">get_entities_by_name</span><span class="p">(</span><span class="s2">&quot;CCSPlayer&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kr">for</span> <span class="n">i</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">class_list</span><span class="p">)</span> <span class="kr">do</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">v</span><span class="p">:</span><span class="n">get_name</span><span class="p">())</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="kr">end</span>
 </code></pre></div>
 <hr />
 <h2 id="get_players">get_players<a class="headerlink" href="#get_players" title="Copy Link">#</a></h2>
 <p><sub> Returns table of players</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>entity_t[] get_players([optional] &lt;bool&gt; enemies_only = false)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>entity_t[] get_players([optional] &lt;bool&gt; enemies_only = false)
 </code></pre></div>
 <table>
 <thead>
@@ -1928,18 +1965,18 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">local</span> <span class="n">enemies_only</span> <span class="o">=</span> <span class="n">entity_list</span><span class="p">.</span><span class="n">get_players</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kr">for</span> <span class="n">_</span><span class="p">,</span><span class="n">player</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">enemies_only</span><span class="p">)</span> <span class="kr">do</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Entity Index: &quot;</span><span class="p">,</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">())</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="kr">end</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">local</span> <span class="n">enemies_only</span> <span class="o">=</span> <span class="n">entity_list</span><span class="p">.</span><span class="n">get_players</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kr">for</span> <span class="n">_</span><span class="p">,</span><span class="n">player</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">enemies_only</span><span class="p">)</span> <span class="kr">do</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Entity Index: &quot;</span><span class="p">,</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">())</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="kr">end</span>
 </code></pre></div>
 <hr />
 <h2 id="get_highest_entity_index">get_highest_entity_index<a class="headerlink" href="#get_highest_entity_index" title="Copy Link">#</a></h2>
 <p><sub> Returns the maximum entity index</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>int get_highest_entity_index()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>int get_highest_entity_index()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">entity_list</span><span class="p">.</span><span class="n">get_highest_entity_index</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">entity_list</span><span class="p">.</span><span class="n">get_highest_entity_index</span><span class="p">())</span>
 </code></pre></div>
 
               
