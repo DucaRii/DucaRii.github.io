@@ -351,6 +351,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api_callbacks/DRAW_MODEL/" class="md-nav__link">
+        DRAW_MODEL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api_callbacks/DRAW_WATERMARK/" class="md-nav__link">
         DRAW_WATERMARK
       </a>
@@ -787,6 +801,13 @@
         <li class="md-nav__item">
   <a href="#find_pattern" class="md-nav__link">
     find_pattern
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find_text" class="md-nav__link">
+    find_text
   </a>
   
 </li>
@@ -1339,6 +1360,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api_types/model_context_t/" class="md-nav__link">
+        model_context_t
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api_types/player_esp_context_t/" class="md-nav__link">
         player_esp_context_t
       </a>
@@ -1355,6 +1390,20 @@
     <li class="md-nav__item">
       <a href="../../api_types/target_selection_context_t/" class="md-nav__link">
         target_selection_context_t
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_types/texture_t/" class="md-nav__link">
+        texture_t
       </a>
     </li>
   
@@ -1735,6 +1784,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#find_text" class="md-nav__link">
+    find_text
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create_interface" class="md-nav__link">
     create_interface
   </a>
@@ -1790,12 +1846,24 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">local</span> <span class="n">pattern_result</span> <span class="o">=</span> <span class="n">memory</span><span class="p">.</span><span class="n">find_pattern</span><span class="p">(</span><span class="s2">&quot;client.dll&quot;</span><span class="p">,</span><span class="s2">&quot;55 15 ?? ?? ?? ??&quot;</span><span class="p">)</span> <span class="c1">--ty ducaren</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">local</span> <span class="n">pattern_result</span> <span class="o">=</span> <span class="n">memory</span><span class="p">.</span><span class="n">find_pattern</span><span class="p">(</span><span class="s2">&quot;client.dll&quot;</span><span class="p">,</span><span class="s2">&quot;55 15 ?? ?? ?? ??&quot;</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="find_text">find_text<a class="headerlink" href="#find_text" title="Copy Link">#</a></h2>
+<p><sub> Returns the address(es) of where the specified read-only text is referenced <br></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>uint find_text(&lt;string&gt; module_name, &lt;string&gt; text)
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>uint[] find_text(&lt;string&gt; module_name, &lt;string&gt; text, &lt;bool&gt; find_all = true)
+</code></pre></div>
+<h4>Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">local</span> <span class="n">head0_reference</span> <span class="o">=</span> <span class="n">memory</span><span class="p">.</span><span class="n">find_text</span><span class="p">(</span><span class="s2">&quot;client.dll&quot;</span><span class="p">,</span> <span class="s2">&quot;head_0&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">-- when passing find_all=true it will instead give you an indexed table with all references rather than just the first one</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kd">local</span> <span class="n">all_head0_references</span> <span class="o">=</span> <span class="n">memory</span><span class="p">.</span><span class="n">find_text</span><span class="p">(</span><span class="s2">&quot;client.dll&quot;</span><span class="p">,</span> <span class="s2">&quot;head_0&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h2 id="create_interface">create_interface<a class="headerlink" href="#create_interface" title="Copy Link">#</a></h2>
 <p><sub> Returns the address of the interface provided</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>int memory.create_interface(&lt;string&gt; module_name, &lt;string&gt; interface_name)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>int memory.create_interface(&lt;string&gt; module_name, &lt;string&gt; interface_name)
 </code></pre></div>
 <table>
 <thead>
@@ -1816,13 +1884,13 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">local</span> <span class="n">interface</span> <span class="o">=</span> <span class="n">memory</span><span class="p">.</span><span class="n">create_interface</span><span class="p">(</span><span class="s2">&quot;client.dll&quot;</span><span class="p">,</span><span class="s2">&quot;VClientEntityList003&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">local</span> <span class="n">interface_vft</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">cast</span><span class="p">(</span><span class="s2">&quot;void***&quot;</span><span class="p">,</span><span class="n">interface</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">local</span> <span class="n">interface</span> <span class="o">=</span> <span class="n">memory</span><span class="p">.</span><span class="n">create_interface</span><span class="p">(</span><span class="s2">&quot;client.dll&quot;</span><span class="p">,</span><span class="s2">&quot;VClientEntityList003&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kd">local</span> <span class="n">interface_vft</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">cast</span><span class="p">(</span><span class="s2">&quot;void***&quot;</span><span class="p">,</span><span class="n">interface</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></div>
 <hr />
 <h2 id="get_vfunc">get_vfunc<a class="headerlink" href="#get_vfunc" title="Copy Link">#</a></h2>
 <p><sub> Returns the n-th virtual function of the objects vtable <br></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>uint get_vfunc(&lt;uint&gt; instance, &lt;int&gt; index)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>uint get_vfunc(&lt;uint&gt; instance, &lt;int&gt; index)
 </code></pre></div>
 <table>
 <thead>
@@ -1843,7 +1911,7 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">local</span> <span class="n">vfunc7</span> <span class="o">=</span> <span class="n">memory</span><span class="p">.</span><span class="n">get_vfunc</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">local</span> <span class="n">vfunc7</span> <span class="o">=</span> <span class="n">memory</span><span class="p">.</span><span class="n">get_vfunc</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 

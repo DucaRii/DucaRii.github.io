@@ -351,6 +351,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api_callbacks/DRAW_MODEL/" class="md-nav__link">
+        DRAW_MODEL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api_callbacks/DRAW_WATERMARK/" class="md-nav__link">
         DRAW_WATERMARK
       </a>
@@ -780,6 +794,41 @@
         <li class="md-nav__item">
   <a href="#play_sound" class="md-nav__link">
     play_sound
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_view_angles_1" class="md-nav__link">
+    get_view_angles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_view_angles" class="md-nav__link">
+    set_view_angles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_bomb_radius" class="md-nav__link">
+    get_bomb_radius
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_bsp_entity" class="md-nav__link">
+    get_bsp_entity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_bsp_entities" class="md-nav__link">
+    get_bsp_entities
   </a>
   
 </li>
@@ -1416,6 +1465,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api_types/model_context_t/" class="md-nav__link">
+        model_context_t
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api_types/player_esp_context_t/" class="md-nav__link">
         player_esp_context_t
       </a>
@@ -1432,6 +1495,20 @@
     <li class="md-nav__item">
       <a href="../../api_types/target_selection_context_t/" class="md-nav__link">
         target_selection_context_t
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_types/texture_t/" class="md-nav__link">
+        texture_t
       </a>
     </li>
   
@@ -1902,6 +1979,41 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#get_view_angles_1" class="md-nav__link">
+    get_view_angles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_view_angles" class="md-nav__link">
+    set_view_angles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_bomb_radius" class="md-nav__link">
+    get_bomb_radius
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_bsp_entity" class="md-nav__link">
+    get_bsp_entity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_bsp_entities" class="md-nav__link">
+    get_bsp_entities
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2094,6 +2206,31 @@
 <h4>Example</h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">engine</span><span class="p">.</span><span class="n">play_sound</span><span class="p">(</span><span class="s2">&quot;sound.wav&quot;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 </code></pre></div>
+<h2 id="get_view_angles_1">get_view_angles<a class="headerlink" href="#get_view_angles_1" title="Copy Link">#</a></h2>
+<p><sub> returns camera angles</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>angle_t get_view_angles()
+</code></pre></div>
+<hr />
+<h2 id="set_view_angles">set_view_angles<a class="headerlink" href="#set_view_angles" title="Copy Link">#</a></h2>
+<p><sub> sets camera angles</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>void set_view_angles(&lt;angle_t&gt; camera_angles)
+</code></pre></div>
+<hr />
+<h2 id="get_bomb_radius">get_bomb_radius<a class="headerlink" href="#get_bomb_radius" title="Copy Link">#</a></h2>
+<p><sub> returns bomb radius dependent on map and game mode</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>float get_bomb_radius()
+</code></pre></div>
+<hr />
+<h2 id="get_bsp_entity">get_bsp_entity<a class="headerlink" href="#get_bsp_entity" title="Copy Link">#</a></h2>
+<p><sub> returns bsp entity info for the specified classname</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>string[] get_bsp_entity(&lt;string&gt; classname)
+</code></pre></div>
+<hr />
+<h2 id="get_bsp_entities">get_bsp_entities<a class="headerlink" href="#get_bsp_entities" title="Copy Link">#</a></h2>
+<p><sub> returns all bsp entity infos</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>string[][] get_bsp_entities()
+</code></pre></div>
+<hr />
 
               
             </article>

@@ -13,7 +13,7 @@
     
     
       
-        <title>TARGET_SELECTION - primordial lua api</title>
+        <title>DRAW_MODEL - primordial lua api</title>
       
     
     
@@ -98,7 +98,7 @@
           <div class="md-header__topic" data-md-component="header-topic">
             <span class="md-ellipsis">
               
-                TARGET_SELECTION
+                DRAW_MODEL
               
             </span>
           </div>
@@ -346,11 +346,19 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../DRAW_MODEL/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         DRAW_MODEL
       </a>
+      
     </li>
   
 
@@ -528,19 +536,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../TARGET_SELECTION/" class="md-nav__link">
         TARGET_SELECTION
       </a>
-      
     </li>
   
 
@@ -1702,21 +1702,40 @@
               
                 
 
-  <h1>TARGET_SELECTION</h1>
+  <h1>DRAW_MODEL</h1>
 
-<p>this callback is called right before target selection is run and allows to override various stuff</p>
+<p>this callback is called right before a model is drawn and allows to override various stuff</p>
 <p>passed into the callback is:</p>
 <ul>
-<li>an instance of the <a href="../../api_types/target_selection_context_t/">target_selection_context_t</a></li>
-<li>an immutable instance of the current <a href="../../api_types/user_cmd_t/">user_cmd_t</a></li>
-<li>an immutable instance of the current <a href="../../api_types/unpredicted_data_t/">unpredicted_data_t</a></li>
+<li>an instance of the <a href="../../api_types/model_context_t/">model_context_t</a></li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_target_selection</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">cmd</span><span class="p">,</span> <span class="n">unpredicted_data</span><span class="p">)</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="c1">-- ignore the player with index 3</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">ctx</span><span class="p">:</span><span class="n">ignore_target</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kr">end</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">callbacks</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">e_callbacks</span><span class="p">.</span><span class="n">TARGET_SELECTION</span><span class="p">,</span> <span class="n">on_target_selection</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">local</span> <span class="n">glow_material</span> <span class="o">=</span> <span class="n">materials</span><span class="p">.</span><span class="n">create</span><span class="p">(</span> <span class="s2">&quot;glow_material&quot;</span><span class="p">,</span> <span class="s">[[</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="s">      &quot;VertexLitGeneric&quot; {</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s">         &quot;$additive&quot; &quot;1&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s">         &quot;$envmap&quot; &quot;models/effects/cube_white&quot;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="s">         &quot;$envmaptint&quot; &quot;[1 1 1]&quot;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="s">         &quot;$envmapfresnel&quot; &quot;1&quot;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="s">         &quot;$envmapfresnelminmaxexp&quot; &quot;[0 1 2]&quot;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="s">         &quot;$alpha&quot; &quot;1.0&quot;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="s">      }</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="s">   ]]</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="kr">function</span> <span class="nf">on_draw_model</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>   <span class="kr">if</span> <span class="n">ctx</span><span class="p">.</span><span class="n">model_name</span><span class="p">:</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;weapons/v_&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">nil</span> <span class="kr">then</span> 
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>      <span class="kr">return</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>   <span class="kr">end</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>   <span class="n">ctx</span><span class="p">.</span><span class="n">override_original</span> <span class="o">=</span> <span class="kc">true</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>   <span class="n">glow_material</span><span class="p">:</span><span class="n">set_shader_param</span><span class="p">(</span><span class="s2">&quot;$envmaptint&quot;</span><span class="p">,</span> <span class="n">vec3_t</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>   <span class="n">glow_material</span><span class="p">:</span><span class="n">set_shader_param</span><span class="p">(</span><span class="s2">&quot;$alpha&quot;</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>   <span class="n">ctx</span><span class="p">:</span><span class="n">draw_original</span><span class="p">()</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>   <span class="n">ctx</span><span class="p">:</span><span class="n">draw_material</span><span class="p">(</span><span class="n">glow_material</span><span class="p">)</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="kr">end</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="n">callbacks</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">e_callbacks</span><span class="p">.</span><span class="n">DRAW_MODEL</span><span class="p">,</span> <span class="n">on_draw_model</span><span class="p">)</span>
 </code></pre></div>
 
               
@@ -1731,7 +1750,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../SUPPORTIVE_RECTANGLE/" class="md-footer__link md-footer__link--prev" aria-label="Previous: SUPPORTIVE_RECTANGLE" rel="prev">
+        <a href="../ANTIAIM/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ANTIAIM" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1740,20 +1759,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              SUPPORTIVE_RECTANGLE
+              ANTIAIM
             </div>
           </div>
         </a>
       
       
         
-        <a href="../WORLD_HITMARKER/" class="md-footer__link md-footer__link--next" aria-label="Next: WORLD_HITMARKER" rel="next">
+        <a href="../DRAW_WATERMARK/" class="md-footer__link md-footer__link--next" aria-label="Next: DRAW_WATERMARK" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              WORLD_HITMARKER
+              DRAW_WATERMARK
             </div>
           </div>
           <div class="md-footer__button md-icon">

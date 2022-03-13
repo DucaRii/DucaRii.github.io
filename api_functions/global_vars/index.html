@@ -351,6 +351,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api_callbacks/DRAW_MODEL/" class="md-nav__link">
+        DRAW_MODEL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api_callbacks/DRAW_WATERMARK/" class="md-nav__link">
         DRAW_WATERMARK
       </a>
@@ -808,6 +822,13 @@
         <li class="md-nav__item">
   <a href="#simticks_this_frame" class="md-nav__link">
     simticks_this_frame
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server_tick" class="md-nav__link">
+    server_tick
   </a>
   
 </li>
@@ -1388,6 +1409,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api_types/model_context_t/" class="md-nav__link">
+        model_context_t
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api_types/player_esp_context_t/" class="md-nav__link">
         player_esp_context_t
       </a>
@@ -1404,6 +1439,20 @@
     <li class="md-nav__item">
       <a href="../../api_types/target_selection_context_t/" class="md-nav__link">
         target_selection_context_t
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_types/texture_t/" class="md-nav__link">
+        texture_t
       </a>
     </li>
   
@@ -1846,6 +1895,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#server_tick" class="md-nav__link">
+    server_tick
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1934,10 +1990,15 @@
 <hr />
 <h2 id="simticks_this_frame">simticks_this_frame<a class="headerlink" href="#simticks_this_frame" title="Copy Link">#</a></h2>
 <p><sub> Returns simulation ticks this frame</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>float simticks_this_frame()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>int simticks_this_frame()
 </code></pre></div>
 <h4>Example</h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;simticks this frame&quot;</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">.</span><span class="n">simticks_this_frame</span><span class="p">())</span>
+</code></pre></div>
+<hr />
+<h2 id="server_tick">server_tick<a class="headerlink" href="#server_tick" title="Copy Link">#</a></h2>
+<p><sub> returns the current tick on the server</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>int server_tick()
 </code></pre></div>
 
               

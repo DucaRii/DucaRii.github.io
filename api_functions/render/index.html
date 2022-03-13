@@ -351,6 +351,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api_callbacks/DRAW_MODEL/" class="md-nav__link">
+        DRAW_MODEL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api_callbacks/DRAW_WATERMARK/" class="md-nav__link">
         DRAW_WATERMARK
       </a>
@@ -862,6 +876,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#weapon_icon" class="md-nav__link">
+    weapon_icon
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#get_default_font" class="md-nav__link">
     get_default_font
   </a>
@@ -983,6 +1004,27 @@
         <li class="md-nav__item">
   <a href="#world_to_screen" class="md-nav__link">
     world_to_screen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load_image" class="md-nav__link">
+    load_image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load_image_buffer" class="md-nav__link">
+    load_image_buffer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#texture" class="md-nav__link">
+    texture
   </a>
   
 </li>
@@ -1465,6 +1507,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api_types/model_context_t/" class="md-nav__link">
+        model_context_t
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api_types/player_esp_context_t/" class="md-nav__link">
         player_esp_context_t
       </a>
@@ -1481,6 +1537,20 @@
     <li class="md-nav__item">
       <a href="../../api_types/target_selection_context_t/" class="md-nav__link">
         target_selection_context_t
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_types/texture_t/" class="md-nav__link">
+        texture_t
       </a>
     </li>
   
@@ -1875,6 +1945,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#weapon_icon" class="md-nav__link">
+    weapon_icon
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#get_default_font" class="md-nav__link">
     get_default_font
   </a>
@@ -2000,6 +2077,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#load_image" class="md-nav__link">
+    load_image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load_image_buffer" class="md-nav__link">
+    load_image_buffer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#texture" class="md-nav__link">
+    texture
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2121,20 +2219,54 @@
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">text_size</span><span class="p">)</span>
 </code></pre></div>
 <hr />
+<h2 id="weapon_icon">weapon_icon<a class="headerlink" href="#weapon_icon" title="Copy Link">#</a></h2>
+<p><sub> renders the weapon icon of the specified weapon id</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>void weapon_icon(&lt;int&gt; weapon_id, &lt;vec2_t&gt; screen_pos, &lt;color_t&gt; text_color, [optional] &lt;bool&gt; centered)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="left">Fields</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>weapon_id</code><br><span class="table_types"><em>int</em></span></td>
+<td align="left">weapon id to render</td>
+</tr>
+<tr>
+<td align="left"><code>screen_pos</code><br><span class="table_types"><em>vec2_t</em></span></td>
+<td align="left">position of text</td>
+</tr>
+<tr>
+<td align="left"><code>text_color</code><br><span class="table_types"><em>color_t</em></span></td>
+<td align="left">color of text</td>
+</tr>
+<tr>
+<td align="left"><code>centered</code><br><span class="table_types"><em>bool</em></span></td>
+<td align="left">should text be centered</td>
+</tr>
+</tbody>
+</table>
+<h4>Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">render</span><span class="p">.</span><span class="n">weapon_icon</span><span class="p">(</span><span class="n">e_items</span><span class="p">.</span><span class="n">WEAPON_AK47</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+</code></pre></div>
+<hr />
 <h2 id="get_default_font">get_default_font<a class="headerlink" href="#get_default_font" title="Copy Link">#</a></h2>
 <p><sub> Returns the cheat's default font</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>font_t get_default_font()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>font_t get_default_font()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">local</span> <span class="n">default_font</span> <span class="o">=</span> <span class="n">render</span><span class="p">.</span><span class="n">get_default_font</span><span class="p">()</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">callbacks</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">e_callbacks</span><span class="p">.</span><span class="n">PAINT</span><span class="p">,</span><span class="kr">function</span><span class="p">()</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="n">render</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="n">default_font</span><span class="p">,</span><span class="s2">&quot;Hi&quot;</span><span class="p">,</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">25</span><span class="p">),</span><span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">))</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="kr">end</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">local</span> <span class="n">default_font</span> <span class="o">=</span> <span class="n">render</span><span class="p">.</span><span class="n">get_default_font</span><span class="p">()</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">callbacks</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">e_callbacks</span><span class="p">.</span><span class="n">PAINT</span><span class="p">,</span><span class="kr">function</span><span class="p">()</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="n">render</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="n">default_font</span><span class="p">,</span><span class="s2">&quot;Hi&quot;</span><span class="p">,</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">25</span><span class="p">),</span><span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">))</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="kr">end</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h2 id="push_clip">push_clip<a class="headerlink" href="#push_clip" title="Copy Link">#</a></h2>
 <p><sub> Pushes a clip onto render elements</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>void push_clip(&lt;vec2_t&gt; start, &lt;vec2_t&gt; size)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>void push_clip(&lt;vec2_t&gt; start, &lt;vec2_t&gt; size)
 </code></pre></div>
 <table>
 <thead>
@@ -2155,22 +2287,22 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">render</span><span class="p">.</span><span class="n">push_clip</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">render</span><span class="p">.</span><span class="n">push_clip</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
 </code></pre></div>
 <hr />
 <h2 id="pop_clip">pop_clip<a class="headerlink" href="#pop_clip" title="Copy Link">#</a></h2>
 <p><sub> Stops all other render calls from being clipped</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>void pop_clip()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>void pop_clip()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">render</span><span class="p">.</span><span class="n">push_clip</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">render</span><span class="p">.</span><span class="n">rect_filled</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span> <span class="c1">-- this rectangle will be cut off in the middle</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">render</span><span class="p">.</span><span class="n">pop_clip</span><span class="p">()</span> <span class="c1">-- you always have to pop it to stop other render.* calls from being clipped</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">render</span><span class="p">.</span><span class="n">push_clip</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">render</span><span class="p">.</span><span class="n">rect_filled</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span> <span class="c1">-- this rectangle will be cut off in the middle</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">render</span><span class="p">.</span><span class="n">pop_clip</span><span class="p">()</span> <span class="c1">-- you always have to pop it to stop other render.* calls from being clipped</span>
 </code></pre></div>
 <hr />
 <h2 id="push_alpha_modifier">push_alpha_modifier<a class="headerlink" href="#push_alpha_modifier" title="Copy Link">#</a></h2>
 <p><sub> Pushes a alpha modifier onto render elements</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>void push_alpha_modifier(&lt;float&gt; alpha_modifier)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>void push_alpha_modifier(&lt;float&gt; alpha_modifier)
 </code></pre></div>
 <table>
 <thead>
@@ -2187,31 +2319,31 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">render</span><span class="p">.</span><span class="n">push_alpha_modifier</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">render</span><span class="p">.</span><span class="n">push_alpha_modifier</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h2 id="pop_alpha_modifier">pop_alpha_modifier<a class="headerlink" href="#pop_alpha_modifier" title="Copy Link">#</a></h2>
 <p><sub> Stops all other elements from having their alpha modified</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>void pop_alpha_modifier()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>void pop_alpha_modifier()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">render</span><span class="p">.</span><span class="n">push_alpha_modifier</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">render</span><span class="p">.</span><span class="n">rect_filled</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span> <span class="c1">-- this will draw with only 100 alpha</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">render</span><span class="p">.</span><span class="n">pop_alpha_modifier</span><span class="p">()</span> <span class="c1">-- you always have to pop the alpha modifier to end it</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">render</span><span class="p">.</span><span class="n">push_alpha_modifier</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">render</span><span class="p">.</span><span class="n">rect_filled</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span> <span class="c1">-- this will draw with only 100 alpha</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="n">render</span><span class="p">.</span><span class="n">pop_alpha_modifier</span><span class="p">()</span> <span class="c1">-- you always have to pop the alpha modifier to end it</span>
 </code></pre></div>
 <hr />
 <h2 id="get_screen_size">get_screen_size<a class="headerlink" href="#get_screen_size" title="Copy Link">#</a></h2>
 <p><sub> Returns current screen size as a vec2_t</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>vec2_t get_screen_size()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>vec2_t get_screen_size()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kd">local</span> <span class="n">screen_size</span> <span class="o">=</span> <span class="n">render</span><span class="p">.</span><span class="n">get_screen_size</span><span class="p">()</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">screen_size</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kd">local</span> <span class="n">screen_size</span> <span class="o">=</span> <span class="n">render</span><span class="p">.</span><span class="n">get_screen_size</span><span class="p">()</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">screen_size</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h2 id="line">line<a class="headerlink" href="#line" title="Copy Link">#</a></h2>
 <p><sub> Renders a 2D line</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>void line(&lt;vec2_t&gt; from, &lt;vec2_t&gt; to, &lt;color_t&gt; color )
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>void line(&lt;vec2_t&gt; from, &lt;vec2_t&gt; to, &lt;color_t&gt; color )
 </code></pre></div>
 <table>
 <thead>
@@ -2236,12 +2368,12 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">render</span><span class="p">.</span><span class="n">line</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">75</span><span class="p">),</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">render</span><span class="p">.</span><span class="n">line</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">75</span><span class="p">),</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
 </code></pre></div>
 <hr />
 <h2 id="rect">rect<a class="headerlink" href="#rect" title="Copy Link">#</a></h2>
 <p><sub> Renders a 2D rectangle</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>void rect(&lt;vec2_t&gt; screen_coords, &lt;vec2_t&gt; rectangle_size, &lt;color_t&gt; color, [optional] &lt;float&gt; rounding)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>void rect(&lt;vec2_t&gt; screen_coords, &lt;vec2_t&gt; rectangle_size, &lt;color_t&gt; color, [optional] &lt;float&gt; rounding)
 </code></pre></div>
 <table>
 <thead>
@@ -2270,12 +2402,12 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">render</span><span class="p">.</span><span class="n">rect</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">75</span><span class="p">),</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">render</span><span class="p">.</span><span class="n">rect</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">75</span><span class="p">),</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
 </code></pre></div>
 <hr />
 <h2 id="rect_filled">rect_filled<a class="headerlink" href="#rect_filled" title="Copy Link">#</a></h2>
 <p><sub> Renders a 2D filled rectangle</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>void rect_filled(&lt;vec2_t&gt; screen_coords, &lt;vec2_t&gt; rectangle_size, &lt;color_t&gt; color, [optional] &lt;float&gt; rounding)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>void rect_filled(&lt;vec2_t&gt; screen_coords, &lt;vec2_t&gt; rectangle_size, &lt;color_t&gt; color, [optional] &lt;float&gt; rounding)
 </code></pre></div>
 <table>
 <thead>
@@ -2304,12 +2436,12 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">render</span><span class="p">.</span><span class="n">rect_filled</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">75</span><span class="p">),</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">render</span><span class="p">.</span><span class="n">rect_filled</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">75</span><span class="p">),</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
 </code></pre></div>
 <hr />
 <h2 id="rect_fade">rect_fade<a class="headerlink" href="#rect_fade" title="Copy Link">#</a></h2>
 <p><sub> Renders a 2D rectangle with a gradient</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>void rect_fade(&lt;vec2_t&gt; screen_coords, &lt;vec2_t&gt; rectangle_size, &lt;color_t&gt; color_start, &lt;color_t&gt; color_end, [optional] &lt;bool&gt; horizontal)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>void rect_fade(&lt;vec2_t&gt; screen_coords, &lt;vec2_t&gt; rectangle_size, &lt;color_t&gt; color_start, &lt;color_t&gt; color_end, [optional] &lt;bool&gt; horizontal)
 </code></pre></div>
 <table>
 <thead>
@@ -2342,12 +2474,12 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">render</span><span class="p">.</span><span class="n">rect_fade</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">75</span><span class="p">),</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">render</span><span class="p">.</span><span class="n">rect_fade</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">75</span><span class="p">),</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
 </code></pre></div>
 <hr />
 <h2 id="triangle">triangle<a class="headerlink" href="#triangle" title="Copy Link">#</a></h2>
 <p><sub> Renders a 2D triangle</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>void triangle(&lt;vec2_t&gt; screen_coords, &lt;int&gt; size, &lt;color_t&gt; color, [optional] &lt;int&gt; rotation)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>void triangle(&lt;vec2_t&gt; screen_coords, &lt;int&gt; size, &lt;color_t&gt; color, [optional] &lt;int&gt; rotation)
 </code></pre></div>
 <table>
 <thead>
@@ -2376,12 +2508,12 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">render</span><span class="p">.</span><span class="n">triangle</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="mi">90</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">render</span><span class="p">.</span><span class="n">triangle</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="mi">90</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h2 id="triangle_filled">triangle_filled<a class="headerlink" href="#triangle_filled" title="Copy Link">#</a></h2>
 <p><sub> Renders a 2D triangle</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>void triangle_filled(&lt;vec2_t&gt; screen_coords, &lt;int&gt; size, &lt;color_t&gt; color, [optional] &lt;int&gt; rotation)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>void triangle_filled(&lt;vec2_t&gt; screen_coords, &lt;int&gt; size, &lt;color_t&gt; color, [optional] &lt;int&gt; rotation)
 </code></pre></div>
 <table>
 <thead>
@@ -2410,12 +2542,12 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">render</span><span class="p">.</span><span class="n">triangle_filled</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="mi">90</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">render</span><span class="p">.</span><span class="n">triangle_filled</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="mi">90</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h2 id="circle">circle<a class="headerlink" href="#circle" title="Copy Link">#</a></h2>
 <p><sub> Renders a 2D circle</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>void circle(&lt;vec2_t&gt; screen_coords, &lt;int&gt; radius, &lt;color_t&gt; color)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>void circle(&lt;vec2_t&gt; screen_coords, &lt;int&gt; radius, &lt;color_t&gt; color, [optional] &lt;int&gt; thickness)
 </code></pre></div>
 <table>
 <thead>
@@ -2437,15 +2569,19 @@
 <td align="left"><code>color</code><br><span class="table_types"><em>color_t</em></span></td>
 <td align="left">circle color</td>
 </tr>
+<tr>
+<td align="left"><code>thickness</code><br><span class="table_types"><em>int</em></span></td>
+<td align="left"></td>
+</tr>
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">render</span><span class="p">.</span><span class="n">circle</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span> <span class="mi">575</span><span class="p">),</span> <span class="mi">25</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">render</span><span class="p">.</span><span class="n">circle</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span> <span class="mi">575</span><span class="p">),</span> <span class="mi">25</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
 </code></pre></div>
 <hr />
 <h2 id="circle_filled">circle_filled<a class="headerlink" href="#circle_filled" title="Copy Link">#</a></h2>
 <p><sub> Renders a 2D filled circle</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>void circle_filled(&lt;vec2_t&gt; screen_coords, &lt;int&gt; radius, &lt;color_t&gt; color)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>void circle_filled(&lt;vec2_t&gt; screen_coords, &lt;int&gt; radius, &lt;color_t&gt; color)
 </code></pre></div>
 <table>
 <thead>
@@ -2470,12 +2606,12 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">render</span><span class="p">.</span><span class="n">circle_filled</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span> <span class="mi">575</span><span class="p">),</span> <span class="mi">25</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="n">render</span><span class="p">.</span><span class="n">circle_filled</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span> <span class="mi">575</span><span class="p">),</span> <span class="mi">25</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
 </code></pre></div>
 <hr />
 <h2 id="progress_circle">progress_circle<a class="headerlink" href="#progress_circle" title="Copy Link">#</a></h2>
 <p><sub> Renders a 2D progress_circle</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>void progress_circle(&lt;vec2_t&gt; screen_coords, &lt;int&gt; radius, &lt;color_t&gt; color, &lt;int&gt; width, &lt;float&gt; progress)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>void progress_circle(&lt;vec2_t&gt; screen_coords, &lt;int&gt; radius, &lt;color_t&gt; color, &lt;int&gt; width, &lt;float&gt; progress)
 </code></pre></div>
 <table>
 <thead>
@@ -2508,12 +2644,12 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="n">render</span><span class="p">.</span><span class="n">progress_circle</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span> <span class="mi">650</span><span class="p">),</span> <span class="mi">25</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="n">render</span><span class="p">.</span><span class="n">progress_circle</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span> <span class="mi">650</span><span class="p">),</span> <span class="mi">25</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h2 id="polygon">polygon<a class="headerlink" href="#polygon" title="Copy Link">#</a></h2>
 <p><sub> Renders a 2D polygon</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>void polygon([table] &lt;vec2_t&gt; points, &lt;color_t&gt; color)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>void polygon([table] &lt;vec2_t&gt; points, &lt;color_t&gt; color)
 </code></pre></div>
 <table>
 <thead>
@@ -2534,12 +2670,12 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>    <span class="n">render</span><span class="p">.</span><span class="n">polygon</span><span class="p">({</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">150</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">100</span><span class="p">)},</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>    <span class="n">render</span><span class="p">.</span><span class="n">polygon</span><span class="p">({</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">150</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">100</span><span class="p">)},</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">))</span>
 </code></pre></div>
 <hr />
 <h2 id="polyline">polyline<a class="headerlink" href="#polyline" title="Copy Link">#</a></h2>
 <p><sub> Renders a 2D polyline</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>void polyline([table] &lt;vec2_t&gt; points, &lt;color_t&gt; color)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>void polyline([table] &lt;vec2_t&gt; points, &lt;color_t&gt; color)
 </code></pre></div>
 <table>
 <thead>
@@ -2560,12 +2696,12 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>    <span class="n">render</span><span class="p">.</span><span class="n">polyline</span><span class="p">({</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">150</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">100</span><span class="p">)},</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>    <span class="n">render</span><span class="p">.</span><span class="n">polyline</span><span class="p">({</span><span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">150</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">100</span><span class="p">)},</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">))</span>
 </code></pre></div>
 <hr />
 <h2 id="world_to_screen">world_to_screen<a class="headerlink" href="#world_to_screen" title="Copy Link">#</a></h2>
 <p><sub> Returns 2D coordinates for a 3D world point or nil on failure</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>vec2_t world_to_screen(&lt;vec3_t&gt; world_position)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>vec2_t world_to_screen(&lt;vec3_t&gt; world_position)
 </code></pre></div>
 <table>
 <thead>
@@ -2582,11 +2718,37 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="kd">local</span> <span class="n">screen_pos</span> <span class="o">=</span> <span class="n">render</span><span class="p">.</span><span class="n">world_to_screen</span><span class="p">(</span><span class="n">world_position</span><span class="p">)</span>
-<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="kr">if</span> <span class="n">screen_pos</span> <span class="o">~=</span> <span class="kc">nil</span> <span class="kr">then</span>
-<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">screen_pos</span><span class="p">)</span> <span class="c1">--unpacks 2D vector</span>
-<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="kr">end</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="kd">local</span> <span class="n">screen_pos</span> <span class="o">=</span> <span class="n">render</span><span class="p">.</span><span class="n">world_to_screen</span><span class="p">(</span><span class="n">world_position</span><span class="p">)</span>
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="kr">if</span> <span class="n">screen_pos</span> <span class="o">~=</span> <span class="kc">nil</span> <span class="kr">then</span>
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">screen_pos</span><span class="p">)</span> <span class="c1">--unpacks 2D vector</span>
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="kr">end</span>
 </code></pre></div>
+<hr />
+<h2 id="load_image">load_image<a class="headerlink" href="#load_image" title="Copy Link">#</a></h2>
+<p><sub> loads an image from a path and returns a texture <br>
+<sub> supports .jpg, .jpeg, .png, .svg, .tga, .bmp</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>texture_t load_image(&lt;string&gt; path)
+</code></pre></div>
+<hr />
+<h2 id="load_image_buffer">load_image_buffer<a class="headerlink" href="#load_image_buffer" title="Copy Link">#</a></h2>
+<p><sub> loads an image from the raw file (has to include header) and returns a texture <br>
+<sub> supports .jpg, .jpeg, .png, .svg, .tga, .bmp</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>texture_t load_image_buffer(&lt;string&gt; raw_file)
+</code></pre></div>
+<hr />
+<h2 id="texture">texture<a class="headerlink" href="#texture" title="Copy Link">#</a></h2>
+<p><sub> renders a texture received from load_image or load_image_buffer</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>void texture(&lt;int&gt; texture_id, &lt;vec2_t&gt; screen_pos, &lt;vec2_t&gt; size, [optional] &lt;color_t&gt; color_tint)
+</code></pre></div>
+<h4>Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="kd">local</span> <span class="n">img</span> <span class="o">=</span> <span class="n">render</span><span class="p">.</span><span class="n">load_image</span><span class="p">(</span><span class="s2">&quot;ak47.svg&quot;</span><span class="p">)</span>
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">img</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>
+<a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a><span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
+<a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a>    <span class="n">render</span><span class="p">.</span><span class="n">texture</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">img</span><span class="p">.</span><span class="n">size</span><span class="p">)</span>
+<a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a><span class="kr">end</span>
+</code></pre></div>
+<hr />
 
               
             </article>
