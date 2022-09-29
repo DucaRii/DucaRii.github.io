@@ -721,8 +721,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api_functions/global_vars/" class="md-nav__link">
-        global_vars
+      <a href="../../api_functions/globals/" class="md-nav__link">
+        globals
       </a>
     </li>
   
@@ -1278,6 +1278,13 @@
   
     <nav class="md-nav" aria-label="general Functions">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is_valid" class="md-nav__link">
+    is_valid
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#get_address" class="md-nav__link">
@@ -1958,6 +1965,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#is_valid" class="md-nav__link">
+    is_valid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#get_address" class="md-nav__link">
     get_address
   </a>
@@ -2185,42 +2199,47 @@
 <p class="admonition-title">Info</p>
 <p>Functions in this group can be called on all types of entities</p>
 </div>
+<h3 id="is_valid">is_valid<a class="headerlink" href="#is_valid" title="Copy Link">#</a></h3>
+<p><sub> returns if the entity is valid and exists
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>bool is_valid()
+</code></pre></div></p>
+<hr />
 <h3 id="get_address">get_address<a class="headerlink" href="#get_address" title="Copy Link">#</a></h3>
 <p><sub> returns the entity address for ease of use in ffi.* functions
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>uint get_address()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>uint get_address()
 </code></pre></div></p>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">get_address</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">get_address</span><span class="p">())</span>
 </code></pre></div>
 <hr />
 <h3 id="get_class_name">get_class_name<a class="headerlink" href="#get_class_name" title="Copy Link">#</a></h3>
 <p><sub> returns the entity class name (i.e. "CCSPlayer")
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>string get_class_name()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>string get_class_name()
 </code></pre></div></p>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">get_class_name</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">get_class_name</span><span class="p">())</span>
 </code></pre></div>
 <hr />
 <h3 id="get_class_id">get_class_id<a class="headerlink" href="#get_class_id" title="Copy Link">#</a></h3>
 <p><sub> returns the entity class id
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>int get_class_id()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>int get_class_id()
 </code></pre></div></p>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">get_class_id</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">get_class_id</span><span class="p">())</span>
 </code></pre></div>
 <hr />
 <h3 id="get_steamids">get_steamids<a class="headerlink" href="#get_steamids" title="Copy Link">#</a></h3>
 <p><sub> returns the entitiy steamID3 as a number and steamID64 as a string
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>int, string get_steamids()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>int, string get_steamids()
 </code></pre></div></p>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">local</span> <span class="n">steamID3</span><span class="p">,</span> <span class="n">steamID64</span> <span class="o">=</span> <span class="n">ent</span><span class="p">:</span><span class="n">get_steamids</span><span class="p">()</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">steamID3</span><span class="p">,</span> <span class="n">steamID64</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">local</span> <span class="n">steamID3</span><span class="p">,</span> <span class="n">steamID64</span> <span class="o">=</span> <span class="n">ent</span><span class="p">:</span><span class="n">get_steamids</span><span class="p">()</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">steamID3</span><span class="p">,</span> <span class="n">steamID64</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h3 id="get_prop">get_prop<a class="headerlink" href="#get_prop" title="Copy Link">#</a></h3>
 <p><sub> returns specified entity prop</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>any get_prop(&lt;string&gt; prop_name, [optional] &lt;int&gt; array_index)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>any get_prop(&lt;string&gt; prop_name, [optional] &lt;int&gt; array_index)
 </code></pre></div>
 <table>
 <thead>
@@ -2241,12 +2260,12 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">get_prop</span><span class="p">(</span><span class="s2">&quot;m_iHealth&quot;</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">get_prop</span><span class="p">(</span><span class="s2">&quot;m_iHealth&quot;</span><span class="p">))</span>
 </code></pre></div>
 <hr />
 <h3 id="set_prop">set_prop<a class="headerlink" href="#set_prop" title="Copy Link">#</a></h3>
 <p><sub> sets a specified entity prop</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>void set_prop(&lt;string&gt; prop_name, &lt;any&gt; value, [optional] &lt;int&gt; array_index)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>void set_prop(&lt;string&gt; prop_name, &lt;any&gt; value, [optional] &lt;int&gt; array_index)
 </code></pre></div>
 <table>
 <thead>
@@ -2271,47 +2290,47 @@
 </tbody>
 </table>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">ent</span><span class="p">:</span><span class="n">set_prop</span><span class="p">(</span><span class="s2">&quot;m_iHealth&quot;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">ent</span><span class="p">:</span><span class="n">set_prop</span><span class="p">(</span><span class="s2">&quot;m_iHealth&quot;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h3 id="get_render_origin">get_render_origin<a class="headerlink" href="#get_render_origin" title="Copy Link">#</a></h3>
 <p><sub> returns the render origin</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>vec3_t get_render_origin()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>vec3_t get_render_origin()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">get_render_origin</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">get_render_origin</span><span class="p">())</span>
 </code></pre></div>
 <hr />
 <h3 id="get_render_angles">get_render_angles<a class="headerlink" href="#get_render_angles" title="Copy Link">#</a></h3>
 <p><sub> returns the render angles</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>angle_t get_render_angles()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>angle_t get_render_angles()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">get_render_angles</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">get_render_angles</span><span class="p">())</span>
 </code></pre></div>
 <hr />
 <h3 id="is_dormant">is_dormant<a class="headerlink" href="#is_dormant" title="Copy Link">#</a></h3>
 <p><sub> if true, new information about this player isnt being networked right now</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>bool is_dormant()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>bool is_dormant()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="p">:</span><span class="n">is_dormant</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="p">:</span><span class="n">is_dormant</span><span class="p">())</span>
 </code></pre></div>
 <hr />
 <h3 id="is_player">is_player<a class="headerlink" href="#is_player" title="Copy Link">#</a></h3>
 <p><sub> checks whether the entity is a player</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>bool is_player()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>bool is_player()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">is_player</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">is_player</span><span class="p">())</span>
 </code></pre></div>
 <hr />
 <h3 id="is_weapon">is_weapon<a class="headerlink" href="#is_weapon" title="Copy Link">#</a></h3>
 <p><sub> checks whether the entity is a weapon</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>bool is_weapon()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>bool is_weapon()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">is_weapon</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">is_weapon</span><span class="p">())</span>
 </code></pre></div>
 <hr />
 <h3 id="get_name">get_name<a class="headerlink" href="#get_name" title="Copy Link">#</a></h3>
@@ -2320,26 +2339,26 @@
 - for weapons: returns the weapon name <br>
 - for other entities: returns the class name
 </sub></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>string get_name()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>string get_name()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">get_name</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">get_name</span><span class="p">())</span>
 </code></pre></div>
 <hr />
 <h3 id="get_index">get_index<a class="headerlink" href="#get_index" title="Copy Link">#</a></h3>
 <p><sub> returns the entity index</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>int get_index()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>int get_index()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">get_index</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">get_index</span><span class="p">())</span>
 </code></pre></div>
 <hr />
 <h3 id="get_bounds">get_bounds<a class="headerlink" href="#get_bounds" title="Copy Link">#</a></h3>
 <p><sub> returns the relative mins/maxs of the entity</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>vec3_t, vec3_t get_bounds()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>vec3_t, vec3_t get_bounds()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">unpack</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">get_bounds</span><span class="p">()))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">unpack</span><span class="p">(</span><span class="n">ent</span><span class="p">:</span><span class="n">get_bounds</span><span class="p">()))</span>
 </code></pre></div>
 <hr />
 <h2 id="player-functions">player functions<a class="headerlink" href="#player-functions" title="Copy Link">#</a></h2>
@@ -2350,58 +2369,58 @@ In the following examples <strong>pl</strong> is a player entity</p>
 </div>
 <h3 id="has_player_flag">has_player_flag<a class="headerlink" href="#has_player_flag" title="Copy Link">#</a></h3>
 <p><sub> checks whether the specified player flag is set</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>bool has_player_flag(&lt;e_player_flags&gt; flag)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>bool has_player_flag(&lt;e_player_flags&gt; flag)
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="p">:</span><span class="n">has_player_flag</span><span class="p">(</span><span class="n">e_player_flags</span><span class="p">.</span><span class="n">ON_GROUND</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="p">:</span><span class="n">has_player_flag</span><span class="p">(</span><span class="n">e_player_flags</span><span class="p">.</span><span class="n">ON_GROUND</span><span class="p">))</span>
 </code></pre></div>
 <hr />
 <h3 id="get_active_weapon">get_active_weapon<a class="headerlink" href="#get_active_weapon" title="Copy Link">#</a></h3>
 <p><sub> returns the current weapon as an entity object or nil on failure</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>entity_t get_active_weapon()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>entity_t get_active_weapon()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="p">:</span><span class="n">get_active_weapon</span><span class="p">():</span><span class="n">get_name</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="p">:</span><span class="n">get_active_weapon</span><span class="p">():</span><span class="n">get_name</span><span class="p">())</span>
 </code></pre></div>
 <hr />
 <h3 id="is_alive">is_alive<a class="headerlink" href="#is_alive" title="Copy Link">#</a></h3>
 <p><sub> is breathe?</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>bool is_alive()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>bool is_alive()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="p">:</span><span class="n">is_alive</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="p">:</span><span class="n">is_alive</span><span class="p">())</span>
 </code></pre></div>
 <hr />
 <h3 id="get_eye_position">get_eye_position<a class="headerlink" href="#get_eye_position" title="Copy Link">#</a></h3>
 <p><sub> returns the world coordinates of where your shots come from</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>vec3_t get_eye_position()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>vec3_t get_eye_position()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="p">:</span><span class="n">get_eye_position</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="p">:</span><span class="n">get_eye_position</span><span class="p">())</span>
 </code></pre></div>
 <hr />
 <h3 id="is_point_visible">is_point_visible<a class="headerlink" href="#is_point_visible" title="Copy Link">#</a></h3>
 <p><sub> checks if a specified world coordinate is visible</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>bool is_point_visible(&lt;vec3_t&gt; world_coordinate)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>bool is_point_visible(&lt;vec3_t&gt; world_coordinate)
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="p">:</span><span class="n">is_point_visible</span><span class="p">(</span><span class="n">vec3_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="p">:</span><span class="n">is_point_visible</span><span class="p">(</span><span class="n">vec3_t</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)))</span>
 </code></pre></div>
 <hr />
 <h3 id="get_hitbox_pos">get_hitbox_pos<a class="headerlink" href="#get_hitbox_pos" title="Copy Link">#</a></h3>
 <p><sub> HITBOX POS!!!!!!!</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>vec3_t get_hitbox_pos(&lt;e_hitboxes&gt; hitbox_id)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>vec3_t get_hitbox_pos(&lt;e_hitboxes&gt; hitbox_id)
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="p">:</span><span class="n">get_hitbox_pos</span><span class="p">(</span><span class="n">e_hitboxes</span><span class="p">.</span><span class="n">HEAD</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="p">:</span><span class="n">get_hitbox_pos</span><span class="p">(</span><span class="n">e_hitboxes</span><span class="p">.</span><span class="n">HEAD</span><span class="p">))</span>
 </code></pre></div>
 <hr />
 <h3 id="is_enemy">is_enemy<a class="headerlink" href="#is_enemy" title="Copy Link">#</a></h3>
 <p><sub> what do u think</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>bool is_enemy()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>bool is_enemy()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="p">:</span><span class="n">is_enemy</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="p">:</span><span class="n">is_enemy</span><span class="p">())</span>
 </code></pre></div>
 <hr />
 <h2 id="weapon-functions">weapon functions<a class="headerlink" href="#weapon-functions" title="Copy Link">#</a></h2>
@@ -2412,26 +2431,26 @@ In the following examples <strong>wep</strong> is a weapon entity</p>
 </div>
 <h3 id="get_weapon_spread">get_weapon_spread<a class="headerlink" href="#get_weapon_spread" title="Copy Link">#</a></h3>
 <p><sub> gets the current weapon spread</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>float get_weapon_spread()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>float get_weapon_spread()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">wep</span><span class="p">:</span><span class="n">get_weapon_spread</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">wep</span><span class="p">:</span><span class="n">get_weapon_spread</span><span class="p">())</span>
 </code></pre></div>
 <hr />
 <h3 id="get_weapon_inaccuracy">get_weapon_inaccuracy<a class="headerlink" href="#get_weapon_inaccuracy" title="Copy Link">#</a></h3>
 <p><sub> gets the current weapon inaccuracy</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>float get_weapon_inaccuracy()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>float get_weapon_inaccuracy()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">wep</span><span class="p">:</span><span class="n">get_weapon_inaccuracy</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">wep</span><span class="p">:</span><span class="n">get_weapon_inaccuracy</span><span class="p">())</span>
 </code></pre></div>
 <hr />
 <h3 id="get_weapon_data">get_weapon_data<a class="headerlink" href="#get_weapon_data" title="Copy Link">#</a></h3>
 <p><sub> gets the current weapon data</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>weapon_data_t get_weapon_data()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>weapon_data_t get_weapon_data()
 </code></pre></div>
 <h4>Example</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">wep</span><span class="p">:</span><span class="n">get_weapon_data</span><span class="p">().</span><span class="n">console_name</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">wep</span><span class="p">:</span><span class="n">get_weapon_data</span><span class="p">().</span><span class="n">console_name</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 

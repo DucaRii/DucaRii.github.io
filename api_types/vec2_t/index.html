@@ -721,8 +721,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api_functions/global_vars/" class="md-nav__link">
-        global_vars
+      <a href="../../api_functions/globals/" class="md-nav__link">
+        globals
       </a>
     </li>
   
@@ -1433,9 +1433,36 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#functions" class="md-nav__link">
     Functions
   </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#length" class="md-nav__link">
+    length
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unpack" class="md-nav__link">
+    unpack
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1764,9 +1791,36 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#functions" class="md-nav__link">
     Functions
   </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#length" class="md-nav__link">
+    length
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unpack" class="md-nav__link">
+    unpack
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1807,8 +1861,32 @@
 </tr>
 </tbody>
 </table>
+<h2 id="operators">Operators<a class="headerlink" href="#operators" title="Copy Link">#</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">local</span> <span class="n">x</span> <span class="o">=</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">local</span> <span class="n">y</span> <span class="o">=</span> <span class="n">vec2_t</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1">-- prints formatted</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1">-- prints y</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">40</span> <span class="c1">-- sets y to 40</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span> <span class="c1">-- prints if x is equal to y</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span> <span class="c1">-- prints result of addition</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="c1">-- prints result of subtraction</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">)</span> <span class="c1">-- prints result of division</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span> <span class="c1">-- prints result of multiplication</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nb">print</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="c1">-- prints result of inversed x</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nb">print</span><span class="p">(</span><span class="o">#</span><span class="n">x</span><span class="p">)</span> <span class="c1">-- prints length of x</span>
+</code></pre></div>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Copy Link">#</a></h2>
-<p>TODO</p>
+<h3 id="length">length<a class="headerlink" href="#length" title="Copy Link">#</a></h3>
+<p><sub> returns the length of the vector</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>float length()
+</code></pre></div>
+<hr />
+<h3 id="unpack">unpack<a class="headerlink" href="#unpack" title="Copy Link">#</a></h3>
+<p><sub> returns the individiual coords</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>float, float unpack()
+</code></pre></div>
+<hr />
 
               
             </article>

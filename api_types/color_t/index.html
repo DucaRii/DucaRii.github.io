@@ -721,8 +721,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api_functions/global_vars/" class="md-nav__link">
-        global_vars
+      <a href="../../api_functions/globals/" class="md-nav__link">
+        globals
       </a>
     </li>
   
@@ -1251,9 +1251,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#functions" class="md-nav__link">
     Functions
   </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from_hsb" class="md-nav__link">
+    from_hsb
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hue" class="md-nav__link">
+    hue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saturation" class="md-nav__link">
+    saturation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brightness" class="md-nav__link">
+    brightness
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fade" class="md-nav__link">
+    fade
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1764,9 +1812,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#functions" class="md-nav__link">
     Functions
   </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from_hsb" class="md-nav__link">
+    from_hsb
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hue" class="md-nav__link">
+    hue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saturation" class="md-nav__link">
+    saturation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brightness" class="md-nav__link">
+    brightness
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fade" class="md-nav__link">
+    fade
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1818,8 +1914,39 @@
 </tr>
 </tbody>
 </table>
+<h2 id="operators">Operators<a class="headerlink" href="#operators" title="Copy Link">#</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">local</span> <span class="n">x</span> <span class="o">=</span> <span class="n">color_t</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1">-- prints formatted</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1">-- prints g</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">40</span> <span class="c1">-- sets g to 40</span>
+</code></pre></div>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Copy Link">#</a></h2>
-<p>TODO</p>
+<h3 id="from_hsb">from_hsb<a class="headerlink" href="#from_hsb" title="Copy Link">#</a></h3>
+<p><sub> creates a color from hue, saturation and brightness</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>color_t from_hsb()
+</code></pre></div>
+<hr />
+<h3 id="hue">hue<a class="headerlink" href="#hue" title="Copy Link">#</a></h3>
+<p><sub> returns the hue of the color</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>float hue()
+</code></pre></div>
+<hr />
+<h3 id="saturation">saturation<a class="headerlink" href="#saturation" title="Copy Link">#</a></h3>
+<p><sub> returns the saturation of the color</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>float saturation()
+</code></pre></div>
+<hr />
+<h3 id="brightness">brightness<a class="headerlink" href="#brightness" title="Copy Link">#</a></h3>
+<p><sub> returns the brightness of the color</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>float brightness()
+</code></pre></div>
+<hr />
+<h3 id="fade">fade<a class="headerlink" href="#fade" title="Copy Link">#</a></h3>
+<p><sub> returns a faded color</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>color_t fade(&lt;color_t&gt; to, &lt;float&gt; fraction)
+</code></pre></div>
+<hr />
 
               
             </article>
